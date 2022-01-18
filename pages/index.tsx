@@ -1,7 +1,6 @@
 import React from "react"
 import { GetStaticProps } from "next"
 import Layout from "../components/Layout"
-import Post, { PostProps } from "../components/Post"
 
 export const getStaticProps: GetStaticProps = async () => {
   const feed = [
@@ -20,7 +19,6 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 type Props = {
-  feed: PostProps[]
 }
 
 const Blog: React.FC<Props> = (props) => {
@@ -29,11 +27,6 @@ const Blog: React.FC<Props> = (props) => {
       <div className="page">
         <h1>Public Feed</h1>
         <main>
-          {props.feed.map((post) => (
-            <div key={post.id} className="post">
-              <Post post={post} />
-            </div>
-          ))}
         </main>
       </div>
       <style jsx>{`
