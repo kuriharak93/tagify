@@ -1,4 +1,4 @@
-import { Session } from "../types/session";
+import { Session } from '../types/session';
 
 export const customGet = async (url: string, session: Session | null) => {
   const res = await fetch(url, {

@@ -14,7 +14,7 @@ const Header: React.FC = () => {
     <div className="left">
       <Link href="/">
         <a className="bold" data-active={isActive('/')}>
-          Feed
+          Home
         </a>
       </Link>
       <style jsx>{`
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
 
   let right = null;
 
-  if (status === "loading") {
+  if (status === 'loading') {
     left = (
       <div className="left">
         <Link href="/">
@@ -117,8 +117,11 @@ const Header: React.FC = () => {
     left = (
       <div className="left">
         <Link href="/">
-          <a className="bold" data-active={isActive('/')}>
-            Feed
+          <a
+            className="text-3xl font-bold underline"
+            data-active={isActive('/')}
+          >
+            Home
           </a>
         </Link>
         <Link href="/drafts">
